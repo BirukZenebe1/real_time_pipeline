@@ -1,0 +1,6 @@
+.venv/
+__pycache__/
+*/__pycache__/
+checkpoints/
+s3_mock/
+.DS_Store
