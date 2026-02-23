@@ -1,0 +1,20 @@
+{
+  "name": "rides-cdc-connector",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "admin",
+    "database.password": "admin",
+    "database.dbname": "rides_db",
+    "plugin.name": "pgoutput",
+    "slot.name": "rides_cdc_slot",
+    "publication.name": "rides_cdc_pub",
+    "topic.prefix": "rides_cdc",
+    "table.include.list": "public.rides",
+    "tombstones.on.delete": "false",
+    "key.converter": "org.apache.kafka.connect.storage.StringConverter",
+    "value.converter": "org.apache.kafka.connect.json.JsonConverter",
+    "value.converter.schemas.enable": "false"
+  }
+}

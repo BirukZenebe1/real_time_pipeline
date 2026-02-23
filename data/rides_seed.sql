@@ -7,6 +7,8 @@ CREATE TABLE rides (
     status VARCHAR(20)
 );
 
+ALTER TABLE rides REPLICA IDENTITY FULL;
+
 -- Insert sample rows 
 INSERT INTO rides (driver_id, city, timestamp, price, status)
 VALUES
